@@ -22,7 +22,6 @@ const CollectionsOverviewContainer = () => (
   <Query query={GET_COLLECTIONS}>
     {({ loading, data }) => {
       console.log({ loading });
-      console.log({ err });
       console.log({ data });
       if (loading) return <Spinner />;
       return <CollectionsOverview collections={data.collections}/>
